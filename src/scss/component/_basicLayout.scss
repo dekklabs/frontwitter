@@ -1,0 +1,28 @@
+.basic-layout {
+    &__menu {
+        padding-right: 0 !important;
+    }
+
+    &__content {
+        height: 100vh;
+        overflow-y: auto;
+        padding: 0 !important;
+        border-right: 1px solid $border-grey;
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: $background-grey-dark;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: $background-dark-light;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #494646;
+        }
+    }
+}

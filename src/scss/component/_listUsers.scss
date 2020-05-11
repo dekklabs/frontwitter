@@ -1,0 +1,25 @@
+.list-users {
+    padding: 0;
+
+    &__user {
+        padding: 15px 30px;
+        color: $font-light;
+        border-bottom: 1px solid $border-grey;
+
+        &:hover {
+            cursor: pointer;
+            color: $font-light;
+            background-color: $background-dark-light;
+            text-decoration: none;
+        }
+    }
+
+    img {
+        width: 64px;
+        height: 64px;
+    }
+}
+.sin-resultados {
+    text-align: center;
+    padding-top: 50px;
+}
