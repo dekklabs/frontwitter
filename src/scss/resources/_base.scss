@@ -1,6 +1,26 @@
 body {
-    background-color: $background-grey-dark;
+    //background-color: $background-grey-dark;
     color: $font-light;
+}
+
+.base-dark {
+    background-color: $background-grey-dark;
+    transition: all .3s;
+}
+
+.base-light {
+    background-color: #FFF;
+    transition: all .3s;
+}
+
+.base-text-color-dark {
+    color: $background-grey-dark !important;
+    transition: all .3s;
+}
+
+.base-text-color-light {
+    color: #FFF !important;
+    transition: all .3s;
 }
 
 .btn {

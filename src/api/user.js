@@ -1,4 +1,4 @@
-import { API_HOST, TOKEN } from "../utils/constant"
+import { API_HOST } from "../utils/constant"
 import { getTokenApi } from "./auth";
 
 export const getUserApi = (id) => {
@@ -12,7 +12,9 @@ export const getUserApi = (id) => {
     }
 
     return fetch(url, parans).then(response => {
-        if (response.status >= 400 ) throw null
+        if (response.status >= 400 ) {
+            console.error("error")
+        }
         return response.json()
     }).then(result => {
         return result

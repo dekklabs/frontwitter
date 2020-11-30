@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from "react-bootstrap";
-import LeftMenu from "../../components/LeftMenu";
+import LeftMenu from "../../components/LeftMenu/LeftMenu.jsx";
 
 export default function BasicLayout({className, children, setRefreshCheckLogin}) {
     return (

@@ -77,8 +77,8 @@ export const logoutApi = () => {
 export const isUserLogedApi = () => {
     const token = getTokenApi()
     if (!token) {
-        return null
         logoutApi()
+        return null
     }
     if ( isExpiredToken(token) ) {
         logoutApi()

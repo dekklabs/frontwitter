@@ -1,0 +1,17 @@
+.bloq-change-color {
+    width: 80%;
+}
+.changeTheme {
+    &.left {
+        border-top-left-radius: 5px !important;
+        border-bottom-left-radius: 5px !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &.right {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px !important;
+        border-bottom-right-radius: 5px !important;
+    }
+}
