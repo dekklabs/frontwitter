@@ -13,8 +13,8 @@ export default function SignInForm({setShowModal}) {
     const {loading} = useSelector(state => state.ui)
 
     const [formValue, handleInputChange] = useForm({
-        email: "vdias@gmail.com",
-        password: "123456789"
+        email: "",
+        password: ""
     })
 
     const { email, password } = formValue

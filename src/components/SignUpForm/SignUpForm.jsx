@@ -13,11 +13,11 @@ export default function SignUpForm({setShowModal}) {
 
     /* useForm */
     const [formValues, handleInputChange] = useForm({
-        nombre : "Elizabeth",
-        apellidos : "Camacho",
-        email : "ecamacho@gmail.com",
-        password: "123456789",
-        repeatPassword: "123456789"
+        nombre : "",
+        apellidos : "",
+        email : "",
+        password: "",
+        repeatPassword: ""
     })
 
     const { nombre, apellidos, email, password, repeatPassword } = formValues
