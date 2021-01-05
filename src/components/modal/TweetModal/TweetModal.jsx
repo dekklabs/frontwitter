@@ -16,12 +16,13 @@ export default function TweetModal({show, setShow}) {
     const [message, setMessage] = useState("")
     const maxLength = 259
 
-    const handleOnSubmit = e => {
+    const handleOnSubmit = async e => {
         e.preventDefault()
         if (message.length > 0 && message.length <= maxLength) {
             try {
                 dispatch(addTweetUser(message))
-                toast.success(message)
+                await toast.success(message)
+                await window.location.reload()
             } catch (error) {
                 toast.warning("Error al enviar el tweet, intentelo más tarde")
             }

@@ -14,7 +14,7 @@ import { getUsers } from '../../actions/users/getUsers';
 
 function Users({setRefreshCheckLogin, location, history}) {
     const dispatch = useDispatch()
-    //const users = useSelector(state => state.users)
+    const users = useSelector(state => state.users)
     
     /* Tema Dark | Light */
     const {theme} = useSelector(state => state.theme);
@@ -83,7 +83,7 @@ function Users({setRefreshCheckLogin, location, history}) {
                 </Button>
             </ButtonGroup>
 
-            {/* { !users ? (
+            { !users ? (
                 <div className='users__loading'>
                     <Spinner animation="border" variant="info"/>
                     Cargando usuarios...
@@ -110,7 +110,7 @@ function Users({setRefreshCheckLogin, location, history}) {
                         )}
                     </Button>
                 </>
-            )} */}
+            )} 
 
         </BasicLayout>
     )

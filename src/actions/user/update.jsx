@@ -5,6 +5,8 @@ export const update = (profile) => {
         const url = `${API_HOST}/modificar-perfil`;
         const {token} = getState().auth
 
+		console.log(profile)
+
         const parans = {
             method: "PUT",
             headers : {

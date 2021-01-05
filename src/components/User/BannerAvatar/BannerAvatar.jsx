@@ -29,10 +29,9 @@ export default function BannerAvatar({user, profile}) {
         }
     }, [id, dispatch, user, profile])
 
-
-
     const bannerUrl = user?.banner ? `${API_HOST}/obtener-banner?id=${user.id}` : null
     const avatarUrl = user?.avatar ? `${API_HOST}/obtener-avatar?id=${user.id}` : AvatarNoFound
+
     // const [realoadFollow, setRealoadFollow] = useState(false)
     // const [followin, setFollowin] = useState(null)
     const [showModal, setShowModal] = useState(false)

@@ -23,7 +23,7 @@ export default function EditUserForm({perfil, setShowModal}) {
         apellidos: perfil.apellidos,
         fechaNacimiento: perfil.fechaNacimiento,
         id: perfil.id,
-        nombre: perfil.nombre,
+        nombre: perfil?.nombre,
         biografia: perfil?.biografia,
         sitioWeb: perfil?.sitioWeb
     })
@@ -87,11 +87,11 @@ export default function EditUserForm({perfil, setShowModal}) {
 
         dispatch(update(formValue))
 
-        dispatch(getPerfil())
+        await dispatch(getPerfil())
 
-        setLoading(false)
-        setShowModal(false)
-        window.location.reload()
+        await setLoading(false)
+        await setShowModal(false)
+        await window.location.reload()
     }
 
     return (

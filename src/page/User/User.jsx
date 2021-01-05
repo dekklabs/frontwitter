@@ -8,10 +8,6 @@ import InfoUser from "../../components/User/InfoUser/InfoUser.jsx";
 import { useParams, withRouter } from "react-router-dom";
 import { getTweetUser } from '../../actions/tweet/getTweetUser';
 import ListTweets from "../../components/ListTweets/ListTweets.jsx";
-import { CantidadFollow } from '../../components/User/CantidadFollow/CantidadFollow';
-// import { getUserApi } from "../../api/user";
-// import { toast } from 'react-toastify';
-// import { getUserTweetApi } from "../../api/tweet";
 
 function User({match, setRefreshCheckLogin}) {
     
@@ -59,10 +55,11 @@ function User({match, setRefreshCheckLogin}) {
             <InfoUser
                 user={user}
             />
-            <CantidadFollow />
             
             <div className="user__tweets">
-                <h3 className={tema}>Tweets ({tweets?.length === 0 ? '0' : tweets?.length})</h3>
+				{tweets &&
+                	<h3 className={tema}>Tweets ({tweets?.length === 0 ? '0' : tweets?.length})</h3>
+				}
                 {tweets && <ListTweets tweets={tweets} idUser={idUser} />}
                 {/* <Button
                     onClick={moreData}
